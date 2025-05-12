@@ -1,0 +1,139 @@
+Root Changes and Errata
+Last updated: May 20, 2023
+
+This document lists changes and additions to Root products in order to improve compatibility between products and fix errors. If you’re looking for the Root FAQ, go here!
+
+If you still have questions, please join our Discord, tag yourself as a Root player in #choose-your-channels, and ask any questions you like in #root-rules. Also, feel free to check the forums at Boardgamegeek.
+
+Tenth-Printing Changes
+1.5.3 Piece Manipulation. Added this rule: "If multiple pieces are removed simultaneously and that would trigger effects, remove all pieces before triggering effects."
+
+9.2.5.I, 9.2.5.III, 9.5.7. Vagabond Item Rules. The Vagabond can no longer freely move coins, bags, and tea between the Satchel and item tracks—they simply go from the Satchel to the item tracks when face up, and go back to the Satchel when flipped face down. This was done to prevent certain exploits related to intentionally discarding swords. 
+
+Please note that the tenth-printing wording suggests that you can refresh a damaged coin, tea, or bag back to its track. This is incorrect—you cannot.
+
+12.2.3 Price of Failure. This rule is edited so the random card discard happens last, so the order matches the Duchy’s player board.
+
+G.1.19. Place. Added the clarification “Put is shorthand for Place.”
+
+Ninth-Printing Changes
+This printing includes the following clarifications in the Law:
+
+1.1.3. Edited to: "Unclear Resolutions and Choices. Whenever it is unclear what order simultaneous effects should resolve in, or which player should make a decision, the player taking their turn chooses."
+
+8.4.2.IIa Martial Law. Edited to “You must spend another matching supporter if the target clearing has at least 3 warriors of another player, including warriors they are treating as their own for rule (Mercenaries, hirelings, etc.).”
+
+9.2.9.IIb Moving with Ally. Append “along with your Vagabond pawn”
+
+C.2.5 The Ferry. Edited to: “Once per turn, pieces moving from the coastal clearing with the Ferry can move to another coastal clearing, treating it as adjacent and moving the Ferry along with them.”
+
+
+Eighth-Printing Changes
+The 8th printing and beyond of the core Root game includes a few changes to the Law and its player boards to better support mixtures of factions in five- and six-player games that combine the Riverfolk, Underworld, and Marauder Expansions. In the core game, these steps of the Marquise and Eyrie setups have been modified as follows:
+
+6.3.2. Place the keep token in any corner clearing. This is your starting clearing.
+
+7.3.2. Place 1 roost and 6 warriors in a corner clearing that is not the starting corner clearing of another player and, if possible, is diagonally opposite from a starting corner clearing.
+
+Their player board backs have been edited similarly.
+
+Likewise, the 7th printing of the Riverfolk Expansion and the 3rd printing of the Underworld Expansion include the same changes to the player boards backs of the Lizard Cult and Underground Duchy.
+
+Also, the Vagabond board has been edited slightly to clarify the intention of “An Evening’s Rest” as follows: "Rest. If in a forest, repair and refresh all damaged items."
+
+Marauder Expansion Changes
+The Law received a massive update for the Marauder Expansion, adding rules for the Lord of the Hundreds, the Keepers in Iron, the hirelings, and advanced setup, along with an index, a glossary, and a table of contents to support the larger size. Many core wordings have also been tweaked to support this new content.
+
+Overall, there are too many changes to itemize, but you can find a version of the Law showing added and changed text in pink here. When a chapter title is in pink, the entire chapter has been added or rewritten. 
+
+The only critical change is to 4.3 Battle, which now specifies that you choose an enemy to battle. Specifically, this means that the Vagabond can no longer battle coalition partners, and vice versa.
+
+Another notable change is to the False Orders card, included in the Exiles and Partisans deck. In line with the new terminology introduced in the Marauder Expansion, it should say “In Birdsong, may discard this card to force an enemy to move half their faction warriors (round up) from a clearing you choose to a clearing you choose, ignoring rule.” This updated wording works exactly the same as it did before, but it now uses the “force” term and the “faction warrior” term introduced above.
+
+Some errors have cropped up, which will be fixed in the eighth printing of the core game and the second printing of the Marauder Expansion. (No printing of the core game will include these issues.) They are listed below:
+
+4.3.4. Hundreds Player Chooses When to Remove Warlord. The second sentence is edited to clarify that the Lord of the Hundreds player chooses whether to remove their warlord or regular warriors: “The side taking hits chooses the order in which their own pieces are removed, but all of their warriors there must be removed before any of their buildings or tokens there can be removed; they also choose the order of any effects triggered by their pieces being removed.”
+4.3.1.I. Edit section reference to 4.3.1.II.
+9.2.8. Edit “that player must have the fewer”
+9.2.9.IIb Moving with Ally. This rule should use the new Force keyword defined in 1.5.5. “Whenever you move to an adjacent clearing, you may also force warriors of one Allied faction to move from your origin clearing to your destination clearing.” (Notably, this changes a ruling from previous printings: the Vagabond no longer triggers Outrage for the Woodland Alliance when moving Alliance warriors, because the Force keyword specifies that you treat the action as if the forced player performed it.)
+14.2.2. Edit ending to “or placed in ways other than setup (14.3.1) and the Anoint action (14.4.3).”
+14.3.1. Add period to end.
+14.7.2. Grandiose. Edit section references to section 14—14.5.3 and 14.5.2.
+15.2.4 Devout Knights. Remove the final clarification text “(If forced to move, the Keepers player may also move relics.)” because it causes more confusion than it resolves.
+15.5.2.II. The Keepers Don’t Need Rule to Battle. The text at the start of this section checks for Keeper rule and warrior in the sentence for the Battle action, rather than in the next sentence for the Delve action. This is incorrect—the board and Learn to Play booklet are correct. The correct text is below:
+
+Choose a clearing whose suit matches the card suit. You must initiate a battle there if any enemy pieces are there. Then, if you rule the clearing and it has at least one Keeper warrior, you may delve there as follows (even if there was no enemy to battle).
+Step 1: Move and Flip Relic. Move any relic from an adjacent forest into that clearing. Flip that relic so its value is showing if it is not. (…)
+
+G.1.10. Edit section reference to 1.5.2.
+G.1.25. Edit section reference to 2.2.4.
+
+Keepers in Iron Board Back, Step 3: This should note that you place the remaining relics randomly.
+
+Keepers in Iron Advanced Setup Card, Step 3: This should note that you place the remaining relics randomly.
+
+Fourth-Printing Changes
+The Law received a major update for the fourth printing in order to support the new factions and new maps in The Underworld Expansion and new cards in the Exiles and Partisans deck. The changes are listed below, except for minor clarifications:
+
+1.1.4 Use of Treat. Added this definition.
+1.4 Players and Factions. Added this guidance.
+2.1.4 Revealing Cards. Added this definition.
+2.5.5 Other. Added this broader guidance for other pieces, removed the explicit section on the Vagabond Pawn (old 2.5.4) because it is covered in the Vagabond's rules.
+2.6 Play Area. Added more explicit guidance on how cards in the play area can be interacted with.
+4.2 Move. Redefined to say you must move at least one warrior.
+(Ultimately this change has no in-game effect because of other changes. This basically just let me remove various mentions of "You must move at least one warrior." elsewhere, and let me rewrite the Marquise March as "up to two moves".)
+6.5 Marquise Daylight Rule. Rewritten to emphasize that you can spend bird cards before you have taken all three of your normal actions. If you desire further clarification: "Then, you may take up to three actions—plus one action per bird card you spend (not as part of an action)—in any order and number."
+9.2.2I Full Removal. ADDED RULE. "Whenever an enemy player uses an effect that says it removes all enemy pieces from a clearing (such as Alliance revolts, Favor of the Mice cards, Conspiracy bombs) with the Vagabond, the Vagabond damages three items."
+9.2.9 Relationships. Generally cleaned up to remove some edge cases.
+9.4.2 Slip. ADDED RULE. "This move ignores all effects that prevent movement out of a clearing (such as the Corvids’ snare)." This prevents game-locking effects present in the Underworld Expansion.
+9.7 Character Reference. Moved this to the back of the rulebook, and integrated expansion Vagabonds.
+11.2.7.IIIa Taking Hits. Expanded this definition.
+12 Underground Duchy. ADDED NEW FACTION.
+13 Corvid Conspiracy. ADDED NEW FACTION.
+Appendices. ADDED NEW CHAPTER.
+
+Fourth-Printing and Underworld Changes
+These unclear rules are in the fourth printing of Root and the first printing of the The Underworld Expansion. They are corrected in the core fifth printing and beyond, and in the Underworld second printing and beyond.
+
+9.2.9.IIb. Moving with Ally. Whenever you move to a clearing, you may also move warriors of one Allied player from your origin clearing to your destination clearing. (Edited to prevent the Vagabond from moving Allied warriors into a forest.)
+9.4.2 Slip. The relevant part of this rule should read "This move ignores all effects that prevent movement in or out of a clearing (such as the Corvids’ snare)." (Edited so that the Vagabond cannot move into the Burrow or a Scoundrel-torched clearing.)
+12.3.3 Step 3: Surface. This setup step for the Underground Duchy (moles) does not give proper instructions when playing with both the Marquise and the Eyrie, as they would make the Duchy start in the same clearing as the Eyrie. The correct step is as follows — "In a corner clearing that does not have the Marquise’s keep, Eyrie’s starting roost, or Cult’s starting garden, and diagonally opposite from one of those starting clearings if possible, place 2 warriors and 1  tunnel. Then place 2 warriors in each clearing adjacent to that corner clearing, except the Burrow."
+Appendix D.2.5. The Ferry. While the Learn to Play guide does instruct you to move the ferry along with any pieces moving on the ferry, the Law appendix does not. This rule should read: "Once per turn, a player taking a move from the coastal clearing with the ferry can move to another coastal clearing, moving the ferry as well. (This follows the normal move rules.) After taking this move, that player draws one card. The ferry cannot be battled or removed."
+
+Third-Printing Balance Changes
+In the third printing and beyond, the core factions received some balance tweaks. You will find all the changes in this thread. PDF stickers for changes on hard components can be found here. 
+
+First-Printing and Riverfolk Changes
+These unclear rules are in the first printing of Root and The Riverfolk Expansion. They are corrected in the second printing and beyond.
+
+Component Manifests: If you’d like to count up your components to make sure you have them all, all of the components in the core game are listed on the setup page (both in the learn-to-play and Law) and on the backs of the faction boards. A components manifest is included in the second printing and beyond.
+
+1.1.3. Immediate, Simultaneous Effects: In the edge case of two game effects triggering simultaneously, the current player chooses the order in which these effects are triggered.
+
+3.1. Tied Score Win: In the case of two factions reaching 30 victory points simultaneously (which is so rare that we've never seen it), the active player wins.
+
+7.4.3. Discrepancy on a New Roost: The Eyrie board says “fewest total pieces” but the rulebook says “fewest warriors”. The rulebook is correct. Though use of this rule is extremely rare, you'll find a sticker you can print out if you wish to correct your board here.
+
+10.5.3. Lizard Scoring Spends the Card You Reveal: The language in this rule suggests you must spend a second card that has not yet been revealed—this is incorrect. You spend the same card you reveal, but you cannot spend a card that you revealed and used for a different ritual.
+
+Mechanical Marquise Setup: The Mechanical Marquise will skip steps 4 and 5 (6.3.4, 6.3.5) of the Marquise’s setup if you’re reading the rulebook. As written, it instructs you to skip steps 3 and 4 of the Marquise’s setup, which is correct if you’re reading the setup instructions on the Marquise’s board. However, the step numbers don’t match between the board and setup steps in the rulebook, which includes the “Gather Warriors and Wood” step, causing this discrepancy.
+
+Mechanical Marquise Board: The map on the Mechanical Marquise board is missing the path from clearing 9 to 12. This is an error and does not restrict the MM's movement. You'll find a sticker you can print out if you wish to correct your board here.
+
+Discard Resolved Mechanical Marquise Orders: The Mechanical Marquise learn-to-play book does not state that you discard a card from the Schedule of Orders once it is resolved. You do discard it.
+
+First-Printing and Riverfolk Clarifications
+These unclear rules are in the first printing of Root and The Riverfolk Expansion. They are corrected in the second printing and beyond.
+
+6.5.4.II. Marquise Must Always Rule to Access Wood: The language in this rule suggests that, when considering a connection of multiple clearings between your chosen build clearing and a clearing containing wood, you do not need to rule the clearing containing the wood. This is incorrect. You must rule every clearing in the chain, including the source clearing of the wood.
+
+7.7.3.I. Flipping Over Eyrie Leaders: You flip all of your leaders face up during your fourth turmoil, when all four of your leaders are face down.
+
+9.8.1. Double "R" Items and Exploring: In a game with two Vagabonds, you cannot have two identical "R" items, so if you explore a ruin with an "R" item that matches one you have, you cannot take it. You still exhaust the torch, but you didn't complete the action, so you don't score 1 victory point.
+
+10.4.3. Spending Lizard Acolytes: When you spend an Acolyte as the Lizards, you return the Acolyte to your supply. Though “spend” is defined and used to mean this in relation to warriors elsewhere, we don’t define it in the Lizard’s section.
+
+10.4.3.I. Crusade Requires Moving a Warrior: As the Lizards, when you crusade and use the second option (move, then you may battle), you must move at least one warrior in order to battle in the destination clearing.
+
+Vagrant Vagabond Ability: When the Vagrant Vagabond uses his special ability to initiate a battle, he treats all hits from both attacker and defender as his own, and he chooses which pieces to remove from both sides (following the normal rule of warriors before buildings or tokens). As a result, he gains VP from removing buildings and tokens, goes Hostile if he removes a warrior, gains Infamy VP from removing pieces, etc. The defender chooses whether to play an ambush card, but the Vagrant gets to choose how to assign hits and gains VP for them if applicable. This has been clarified in the 2nd printing and beyond by adding "and chooses" to the Vagrant's card text.
+

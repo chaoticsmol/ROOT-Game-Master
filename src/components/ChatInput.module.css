@@ -1,0 +1,49 @@
+.inputContainer {
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.textInput {
+  flex: 1;
+  min-height: 40px;
+  max-height: 120px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-family: 'Garamond', serif;
+  font-size: 16px;
+  color: white;
+  resize: none;
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.3px;
+}
+
+.textInput:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.textInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Hide the send button as requested */
+.sendButton {
+  display: none;
+} 
