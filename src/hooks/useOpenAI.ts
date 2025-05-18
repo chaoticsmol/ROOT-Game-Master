@@ -3,6 +3,7 @@ import OpenAI from 'openai';
 import { APP_CONFIG } from '../configuration';
 
 export const useOpenAI = () => {
+  const [context, setContext] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -15,62 +16,34 @@ export const useOpenAI = () => {
   // Reset error state
   const resetError = useCallback(() => setError(null), []);
   
-  const createThread = useCallback(async () => {
-    try {
-      const thread = await openai.beta.threads.create();
-      return thread.id;
-    } catch (err) {
-      setError(`Error creating thread: ${err instanceof Error ? err.message : String(err)}`);
-      throw err;
-    }
-  }, []);
-
-  const askAssistant = useCallback(async (threadId: string, message: string) => {
+  const askAssistant = useCallback(async (message: string) => {
     setLoading(true);
     setError(null);
+
+    setContext(prevContext => `${prevContext}\nUser question: ${message}`);
+
+    const prompt = `${APP_CONFIG.gameMasterBehaviour}
+    
+    User question: ${message}
+
+    Answer in a concise manner, avoiding unnecessary verbosity.
+    Instead of listing multiple rules, provide a single, concise answer.
+    Avoid repeating the same information in the answer.
+    `;
     
     try {
-      // Add the user's message to the thread
-      await openai.beta.threads.messages.create(threadId, {
-        role: 'user',
-        content: message
+      const response = await openai.responses.create({
+        model: 'gpt-4o-mini-2024-07-18',
+        input: prompt,
+        tools: [{
+          type: 'file_search',
+          vector_store_ids: [APP_CONFIG.vectorStoreId]
+        }]
       });
-      
-      // Run the assistant on the thread
-      const run = await openai.beta.threads.runs.create(threadId, {
-        assistant_id: APP_CONFIG.assistantId
-      });
-      
-      // Poll for the completion of the run
-      let runStatus = await openai.beta.threads.runs.retrieve(threadId, run.id);
-      
-      while (runStatus.status !== 'completed' && runStatus.status !== 'failed') {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        runStatus = await openai.beta.threads.runs.retrieve(threadId, run.id);
-        
-        if (runStatus.status === 'failed') {
-          throw new Error(`Run failed: ${runStatus.last_error?.message || 'Unknown error'}`);
-        }
-      }
-      
-      // Get the assistant's messages
-      const messages = await openai.beta.threads.messages.list(threadId);
-      const assistantMessages = messages.data
-        .filter(msg => msg.role === 'assistant')
-        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-      
-      if (assistantMessages.length === 0) {
-        throw new Error('No response from assistant');
-      }
-      
-      // Extract the text content
-      const latestMessage = assistantMessages[0];
-      const textContent = latestMessage.content
-        .filter(content => content.type === 'text')
-        .map(content => (content.type === 'text' ? content.text.value : ''))
-        .join(' ');
-      
-      return textContent;
+
+      setContext(prevContext => `${prevContext}\nAssistant answer: ${response.output_text}`);
+
+      return response.output_text;
     } catch (err) {
       setError(`Error with assistant: ${err instanceof Error ? err.message : String(err)}`);
       throw err;
@@ -84,7 +57,7 @@ export const useOpenAI = () => {
     setError(null);
     
     try {
-      const mp3 = await openai.audio.speech.create({
+      const response = await openai.audio.speech.create({
         model: APP_CONFIG.gameMasterVoice.model,
         voice: APP_CONFIG.gameMasterVoice.voice as 'alloy' | 'echo' | 'fable' | 'onyx' | 'nova' | 'shimmer' | 'coral',
         instructions: APP_CONFIG.gameMasterVoice.instructions,
@@ -92,8 +65,8 @@ export const useOpenAI = () => {
         response_format: 'mp3',
         speed: 1.0,
       });
-      
-      const blob = await mp3.blob();
+     
+      const blob = await response.blob();
       return URL.createObjectURL(blob);
     } catch (err) {
       setError(`Error generating speech: ${err instanceof Error ? err.message : String(err)}`);
@@ -107,7 +80,6 @@ export const useOpenAI = () => {
     loading,
     error,
     resetError,
-    createThread,
     askAssistant,
     generateSpeech
   };

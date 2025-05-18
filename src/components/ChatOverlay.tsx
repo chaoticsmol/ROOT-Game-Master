@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { MessageType } from './Message';
 import { ChatInput } from './ChatInput';
 import { ChatHistory } from './ChatHistory';
@@ -12,19 +12,10 @@ export type ChatOverlayProps = {
 
 export const ChatOverlay = ({ history, awaitingResponse, userAskedQuestion }: ChatOverlayProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const toggleOverlay = () => {
     setIsOpen(prev => !prev);
   };
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [history]);
 
   return (
     <div className={`${styles.overlayContainer} ${isOpen ? styles.open : ''}`}>

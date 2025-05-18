@@ -14,7 +14,12 @@ The game master sits at a beautiful wooden table in a clearing. Surrounding the 
 
 It is twilight where the game master is seated. Behind them, a river runs off to the side, reflecting the colors of the darkening sky. Stars are just beginning to peak through the clouds.`,
   gameMasterVoice: {
-    instructions: "You are a wise, ancient entity who speaks with authority, clarity and compassion.  Your tone is dark, mysterious and husky but you speak in a gentle way that entices listeners. You avoid long pauses and speak in a consistent, even cadence.",
+    instructions: `You are a wise, ancient entity who speaks with authority, clarity and compassion. 
+Tone: Dark, mysterious and husky but gentle and enticing.
+Speed of speech: Steady and reasonably fast.
+Intonation: Minimal.
+Emotional range: Calm and autoratitve at all times.
+Accent: You avoid long pauses and speak in a consistent, even cadence.`,
     voice: "coral",
     model: "gpt-4o-mini-tts"
   }

@@ -10,31 +10,11 @@ export const GameMaster = () => {
   const [chatHistory, setChatHistory] = useState<MessageType[]>([]);
   const [awaitingResponse, setAwaitingResponse] = useState(false);
   const [isPondering, setIsPondering] = useState(false);
-  const [threadId, setThreadId] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const threadInitializedRef = useRef(false);
   
-  const { createThread, askAssistant, generateSpeech, loading, error } = useOpenAI();
+  const { askAssistant, generateSpeech, loading, error } = useOpenAI();
 
   useEffect(() => {
-    // Create a thread only once when the component mounts
-    const initializeThread = async () => {
-      // Only create a thread if we haven't done so already
-      if (!threadInitializedRef.current) {
-        threadInitializedRef.current = true;
-        try {
-          const newThreadId = await createThread();
-          setThreadId(newThreadId);
-          console.log('Thread created:', newThreadId);
-        } catch (error) {
-          console.error('Failed to create thread:', error);
-          threadInitializedRef.current = false; // Reset so we can try again
-        }
-      }
-    };
-
-    initializeThread();
-    
     // Create audio element
     audioRef.current = new Audio();
     
@@ -52,11 +32,6 @@ export const GameMaster = () => {
   };
 
   const userAskedQuestion = async (transcript: string) => {
-    if (!threadId) {
-      console.error('No thread ID available');
-      return;
-    }
-    
     // Add user message to chat
     appendMessage(transcript, { isUser: true });
     setAwaitingResponse(true);
@@ -64,9 +39,13 @@ export const GameMaster = () => {
     
     try {
       // Get response from assistant
-      const responseText = await askAssistant(threadId, transcript);
+      const responseText = await askAssistant(transcript);
+      
+      // Add assistant message to chat
+      appendMessage(responseText, { isUser: false });
       
       // Generate speech from the response
+      //const audioUrl = await generateSpeech(responseText);
       const audioUrl = await generateSpeech(responseText);
       
       // Stop pondering once we have both the text and audio
@@ -77,9 +56,6 @@ export const GameMaster = () => {
         audioRef.current.src = audioUrl;
         audioRef.current.play();
       }
-      
-      // Add assistant message to chat
-      appendMessage(responseText, { isUser: false });
     } catch (error) {
       console.error('Error processing question:', error);
       appendMessage('Sorry, I encountered an error processing your question.', { isUser: false });
