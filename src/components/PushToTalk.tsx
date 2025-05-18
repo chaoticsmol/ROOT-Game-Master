@@ -97,7 +97,9 @@ export const PushToTalk = ({ onRecordingComplete }: PushToTalkProps) => {
         onTouchStart={handlePushToTalk}
         disabled={recordingState === 'transcribing'}
       >
-        <div className={`${styles.indicator} ${recordingState === 'transcribing' ? styles.spinner : ''}`} />
+        <div className={`${styles.indicator} ${recordingState === 'transcribing' ? styles.spinner : ''}`}>
+          {recordingState === 'recording' && <span></span>}
+        </div>
         <span className={styles.text}>
           {recordingState === 'recording' ? 'Push to stop recording' : recordingState === 'transcribing' ? 'Transcribing...' : 'Push to talk'}
         </span>

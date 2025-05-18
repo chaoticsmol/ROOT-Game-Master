@@ -55,8 +55,63 @@
 }
 
 .button.recording .indicator {
-  background-color: #6c757d;
-  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+}
+
+.button.recording .indicator::before,
+.button.recording .indicator::after,
+.button.recording .indicator::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background-color: #dc3545;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+.button.recording .indicator::before {
+  height: 100%;
+  left: 0;
+  animation-name: audio-wave1;
+}
+
+.button.recording .indicator::after {
+  height: 100%;
+  right: 0;
+  animation-name: audio-wave2;
+}
+
+.button.recording .indicator span {
+  height: 100%;
+  width: 5px;
+  background-color: #dc3545;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: audio-wave3;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes audio-wave1 {
+  0%, 100% { height: 8px; }
+  50% { height: 16px; }
+}
+
+@keyframes audio-wave2 {
+  0%, 100% { height: 16px; }
+  50% { height: 8px; }
+}
+
+@keyframes audio-wave3 {
+  0%, 100% { height: 12px; }
+  50% { height: 20px; }
 }
 
 .button.transcribing {
