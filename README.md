@@ -1,32 +1,48 @@
-# TypeScript OpenAI Application
+# Root Game Master
 
-A simple TypeScript application with OpenAI integration.
+This is an OpenAI-driven assistant that answers questions about the ROOT board game.
+
+## Disclaimers
+
+This is, inherently, a highly personalized project. It's not designed to be deployed
+or readily used by others.  With a little setup, it can be, though.
+
+I don't have any code for creating the vector store automatically. You will have to upload the files
+in the `resources/` folder to one yourself.
+
+## Rights
+
+All of the contents of the `resources/` directory are property of
+[Leder Games](https://ledergames.com/pages/resources).
+
+This code is [licensed](#LICENSE) under the GPL v3.0.  Especially given that most of this code was
+LLM-generated, I ask that you please use this work respectfully and considerately.
+
+The image of the Game Master was also generated with OpenAI.  PLEASE PAY REAL ARTISTS IF YOU CAN.
 
 ## Setup
 
-1. Install dependencies:
+1. Modify your `configuration.ts` file.
+
+```json
+{
+  "vectorStoreId": "id of the vector store you create" 
+}
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Create a `.env` file:
-```bash
-cp .env.example .env
+3. Create a `.env` file containing your OpenAI API key
 ```
-
-3. Add your OpenAI API key to the `.env` file:
-```
-OPENAI_API_KEY=your-api-key-here
+VITE_OPENAI_API_KEY=your-api-key-here
 ```
 
 ## Development
 
-- Run in development mode:
-```bash
-npm run dev
-```
-
-- Build the project:
+- Build the project
 ```bash
 npm run build
 ```
@@ -35,10 +51,3 @@ npm run build
 ```bash
 npm start
 ```
-
-## Project Structure
-
-- `src/index.ts` - Main application file
-- `.env` - Environment variables (not tracked in git)
-- `tsconfig.json` - TypeScript configuration
-- `package.json` - Project dependencies and scripts 
