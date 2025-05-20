@@ -3,7 +3,6 @@ import OpenAI from 'openai';
 import { APP_CONFIG } from '../configuration';
 
 export const useOpenAI = () => {
-  const [context, setContext] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -19,8 +18,6 @@ export const useOpenAI = () => {
   const askAssistant = useCallback(async (message: string) => {
     setLoading(true);
     setError(null);
-
-    setContext(prevContext => `${prevContext}\nUser question: ${message}`);
 
     const prompt = `${APP_CONFIG.gameMasterBehaviour}
     
@@ -40,8 +37,6 @@ export const useOpenAI = () => {
           vector_store_ids: [APP_CONFIG.vectorStoreId]
         }]
       });
-
-      setContext(prevContext => `${prevContext}\nAssistant answer: ${response.output_text}`);
 
       return response.output_text;
     } catch (err) {

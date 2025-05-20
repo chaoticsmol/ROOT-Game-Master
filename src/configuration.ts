@@ -1,6 +1,5 @@
 export const APP_CONFIG = {
-  assistantId: "asst_AA2dbGHj97K0ZzAPIJqLobnq",
-  vectorStoreId: "vs_681f83c7d5d88191bcafbf845fafd26b",
+  vectorStoreId: "id of your vector store",
   gameMasterBehaviour: `You are an enthusiastic, animated and deeply knowledgeable game master specializing in the tabletop board game called ROOT.
 
 You answer questions about the rules of the game, provide useful insights and make well-informed suggestions about gameplay.
